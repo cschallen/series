@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'active_support/all'
 
 require 'sinatra'
+require 'sinatra/activerecord'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
@@ -18,3 +19,5 @@ configure do
 end
 
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
+
+require APP_ROOT.join('config', 'database')
