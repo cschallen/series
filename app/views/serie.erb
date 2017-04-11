@@ -2,17 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/serie.css">
+
     <title>Nova série</title>
 </head>
 <body>
     <h1>Nova série:</h1>
 
     <form action="/new" method="post" name="serie">
-        <label>Nome: </label>
+        <label class="color-red">Nome: </label>
         <input type="text" name="serie[name]">
         <br>
 
-        <label>Temporada: </label>
+        <label class="color-red">Temporada: </label>
         <select name="serie[season]">
             <% for i in 1..15 %>
             <option value="<%= i %>"><%= i %></option>
@@ -20,7 +22,7 @@
         </select>
         <br>
 
-        <label>Episódio: </label>
+        <label class="color-red">Episódio: </label>
         <select name="serie[episode]">
             <% for i in 1..40 %>
             <option value="<%= i %>"><%= i %></option>
@@ -28,7 +30,7 @@
         </select>
 
         <br><br>
-        <input type="submit" svalue="Enviar">
+        <input type="submit" value="Enviar">
     </form>
 
 
