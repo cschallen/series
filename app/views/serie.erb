@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/stylesheets/serie.css">
+    <script src="/javascript/serie.js">
+
+    </script>
 
     <title>Nova série</title>
 </head>
@@ -10,7 +13,7 @@
     <h1>Nova série:</h1>
 
     <form action="/new" method="post" name="serie">
-        <label class="color-red">Nome: </label>
+        <label id="name" class="color-red">Nome: </label>
         <input type="text" name="serie[name]">
         <br>
 
@@ -31,6 +34,7 @@
 
         <br><br>
         <input type="submit" value="Enviar">
+        <input type="button" value="Testar JS" onclick="change_color()">
     </form>
 
 
